@@ -57,10 +57,13 @@ namespace HT_tasks_atoffice
                 NamespaceB.Relationship dest = new NamespaceB.Relationship();
                 dest.RelationshipWith = MapManuallyAB(src.RelationshipWith);
 
-                dest.RelationShipType = new string[src.RelationShipType.Count()];
-                for (int i = 0; i < src.RelationShipType.Count(); i++)
+                if (src.RelationShipType != null)
                 {
-                    dest.RelationShipType[i] = src.RelationShipType[i].ToString();
+                    dest.RelationShipType = new string[src.RelationShipType.Count()];
+                    for (int i = 0; i < src.RelationShipType.Count(); i++)
+                    {
+                        dest.RelationShipType[i] = src.RelationShipType[i].ToString();
+                    }
                 }
                 return dest;
             }
@@ -108,12 +111,15 @@ namespace HT_tasks_atoffice
             dest.RelationshipWith = MapManuallyBA(src.RelationshipWith);
             
             dest.RelationShipType = new List<RelationShipType>();
-            for (int i = 0; i < src.RelationShipType.Length; i++)
+            if (src.RelationShipType != null)
             {
-                bool isParseable = Enum.TryParse(src.RelationShipType[i], out RelationShipType relationshiptype);
-                if (isParseable == true)
+                for (int i = 0; i < src.RelationShipType.Length; i++)
                 {
-                    dest.RelationShipType.Add(relationshiptype);
+                    bool isParseable = Enum.TryParse(src.RelationShipType[i], out RelationShipType relationshiptype);
+                    if (isParseable == true)
+                    {
+                        dest.RelationShipType.Add(relationshiptype);
+                    }
                 }
             }
             return dest;

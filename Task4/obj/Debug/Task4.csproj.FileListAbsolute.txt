@@ -1,0 +1,13 @@
+C:\Projects\HT_tasks_atoffice\Task4\bin\Debug\Task4.exe.config
+C:\Projects\HT_tasks_atoffice\Task4\bin\Debug\Task4.exe
+C:\Projects\HT_tasks_atoffice\Task4\bin\Debug\Task4.pdb
+C:\Projects\HT_tasks_atoffice\Task4\bin\Debug\AutoMapper.dll
+C:\Projects\HT_tasks_atoffice\Task4\bin\Debug\System.ValueTuple.dll
+C:\Projects\HT_tasks_atoffice\Task4\bin\Debug\AutoMapper.pdb
+C:\Projects\HT_tasks_atoffice\Task4\bin\Debug\AutoMapper.xml
+C:\Projects\HT_tasks_atoffice\Task4\bin\Debug\System.ValueTuple.xml
+C:\Projects\HT_tasks_atoffice\Task4\obj\Debug\Task4.csprojAssemblyReference.cache
+C:\Projects\HT_tasks_atoffice\Task4\obj\Debug\Task4.csproj.CoreCompileInputs.cache
+C:\Projects\HT_tasks_atoffice\Task4\obj\Debug\Task4.csproj.CopyComplete
+C:\Projects\HT_tasks_atoffice\Task4\obj\Debug\Task4.exe
+C:\Projects\HT_tasks_atoffice\Task4\obj\Debug\Task4.pdb
