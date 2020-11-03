@@ -1,0 +1,7 @@
+C:\Projects\HT_tasks_atoffice\HT_tasks_atoffice\bin\Debug\HT_tasks_atoffice.exe.config
+C:\Projects\HT_tasks_atoffice\HT_tasks_atoffice\bin\Debug\HT_tasks_atoffice.exe
+C:\Projects\HT_tasks_atoffice\HT_tasks_atoffice\bin\Debug\HT_tasks_atoffice.pdb
+C:\Projects\HT_tasks_atoffice\HT_tasks_atoffice\obj\Debug\HT_tasks_atoffice.csprojAssemblyReference.cache
+C:\Projects\HT_tasks_atoffice\HT_tasks_atoffice\obj\Debug\HT_tasks_atoffice.csproj.CoreCompileInputs.cache
+C:\Projects\HT_tasks_atoffice\HT_tasks_atoffice\obj\Debug\HT_tasks_atoffice.exe
+C:\Projects\HT_tasks_atoffice\HT_tasks_atoffice\obj\Debug\HT_tasks_atoffice.pdb
