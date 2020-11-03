@@ -1,11 +1,7 @@
-﻿using System;
+﻿using NamespaceA;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.Versioning;
-using System.Text;
-using System.Threading.Tasks;
-using NamespaceA;
-using NamespaceB;
 
 
 namespace HT_tasks_atoffice
@@ -26,7 +22,7 @@ namespace HT_tasks_atoffice
         public static NamespaceB.Person MapManuallyAB(NamespaceA.Person src)
         {
             NamespaceB.Person dest = new NamespaceB.Person();
-            
+
             if (src == null)
             {
                 return null;
@@ -46,17 +42,35 @@ namespace HT_tasks_atoffice
                 }
 
                 dest.Sex = src.Sex.ToString();
+
                 if (src.Relationships != null)
                 {
                     dest.Relationships = new NamespaceB.Relationship[src.Relationships.Count];
-                    // foreach (var relationship in src.Relationships)
-                    for (int i = 0; i < src.Relationships.Count; i++)
+
+                    for (int i = 0; i < src.Relationships.Count(); i++)
                     {
-                        //dest.Relationships[i] = new NamespaceB.Relationship();
-            
-                        dest.Relationships[i].RelationshipWith = MapManuallyAB(src.Relationships[i].RelationshipWith);
-                       // dest.Relationships[i].RelationShipType[i] = src.Relationships[i].RelationShipType.ToString();
+                        dest.Relationships[i] = new NamespaceB.Relationship();
+                        dest.Relationships[i] = MapManuallyAB(src.Relationships[i]);
                     }
+                }
+                return dest;
+            }
+        }
+        public static NamespaceB.Relationship MapManuallyAB(NamespaceA.Relationship src)
+        {
+            if (src == null)
+            {
+                return null;
+            }
+            else
+            {
+                NamespaceB.Relationship dest = new NamespaceB.Relationship();
+                dest.RelationshipWith = MapManuallyAB(src.RelationshipWith);
+
+                dest.RelationShipType = new string[src.RelationShipType.Count()];
+                for (int i = 0; i < src.RelationShipType.Count(); i++)
+                {
+                    dest.RelationShipType[i] = src.RelationShipType[i].ToString();
                 }
                 return dest;
             }
@@ -91,15 +105,17 @@ namespace HT_tasks_atoffice
                       }
                  }
             };
+            
             NamespaceB.Person dest = MapManuallyAB(test2);
             Console.WriteLine("Name: " + dest.Name);
             Console.WriteLine("Age: " + dest.Age);
             Console.WriteLine("Sex: " + dest.Sex);
-            for (int i = 0; i<dest.Relationships.Length; i++)
+            for (int i = 0; i < dest.Relationships.Length; i++)
             {
-                
+                Console.WriteLine("Relationship: " + dest.Relationships[i].RelationshipWith.Name);
+                Console.WriteLine("Relationship Type: " + dest.Relationships[i].RelationShipType[i]);
             }
-            
+
 
 
         }
