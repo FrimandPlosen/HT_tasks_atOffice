@@ -9,38 +9,38 @@ namespace HT_tasks_atoffice
     class Program
     {
 
-        public static NamespaceB.Person MapManuallyAB(NamespaceA.Person src)
+        public static NamespaceB.Person MapManuallyAB(NamespaceA.Person src)        //Maps the Person object from NamespaceA -> NamespaceB
         {
             NamespaceB.Person dest = new NamespaceB.Person();
 
-            if (src == null)
+            if (src == null)                                                        // Makes sure code doesnt run if there isnt a person to map
             {
                 return null;
             }
             else
             {
-                dest.Name = src.FirstName + " " + src.LastName;
+                dest.Name = src.FirstName + " " + src.LastName;                     // Combines FirstName and LastName into one string
 
-                bool isParseable = Int32.TryParse(src.YearOfBirth, out int yearOfBirth);
+                bool isParseable = Int32.TryParse(src.YearOfBirth, out int yearOfBirth);    //checks to see if the string "YearOfBirth" is a number, and stores it in a int
                 if (isParseable == true)
                 {
-                    dest.Age = DateTime.Now.Year - yearOfBirth;
+                    dest.Age = DateTime.Now.Year - yearOfBirth;                         // if it is, calculates age from current date and yearOfBirth
                 }
                 else
                 {
                     Console.WriteLine("NamespaceA Year of Birth is not a number");
                 }
 
-                dest.Sex = src.Sex.ToString();
+                dest.Sex = src.Sex.ToString();                                              // uses an enum function to turn it to a string.
 
-                if (src.Relationships != null)
+                if (src.Relationships != null)                                              // check to make sure code doesnt run if the person does not have any relationships
                 {
-                    dest.Relationships = new NamespaceB.Relationship[src.Relationships.Count];
-
+                    dest.Relationships = new NamespaceB.Relationship[src.Relationships.Count];  // creates new Array in the NamespaceB object with same length as the amount of elements
+                                                                                                // in NamespaceA list
                     for (int i = 0; i < src.Relationships.Count(); i++)
                     {
-                        dest.Relationships[i] = new NamespaceB.Relationship();
-                        dest.Relationships[i] = MapManuallyAB(src.Relationships[i]);
+                        dest.Relationships[i] = new NamespaceB.Relationship();                  // Creates a new object in the array to store info in
+                        dest.Relationships[i] = MapManuallyAB(src.Relationships[i]);          
                     }
                 }
                 return dest;
