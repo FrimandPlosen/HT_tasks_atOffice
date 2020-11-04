@@ -29,7 +29,7 @@ namespace Task4
                     }
 
                 }
-
+                
             };
 
             Console.WriteLine("Data from NamespaceA: Foo: " + Aclass1.Foo + ", Bar: " + Aclass1.Bar + ", Qux: " + Aclass1.Baz.Qux

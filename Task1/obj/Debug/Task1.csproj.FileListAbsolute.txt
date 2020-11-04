@@ -1,0 +1,10 @@
+C:\Projects\HT_tasks_atoffice\Task1\bin\Debug\Task1.exe.config
+C:\Projects\HT_tasks_atoffice\Task1\bin\Debug\Task1.exe
+C:\Projects\HT_tasks_atoffice\Task1\bin\Debug\Task1.pdb
+C:\Projects\HT_tasks_atoffice\Task1\bin\Debug\Newtonsoft.Json.dll
+C:\Projects\HT_tasks_atoffice\Task1\bin\Debug\Newtonsoft.Json.xml
+C:\Projects\HT_tasks_atoffice\Task1\obj\Debug\Task1.csprojAssemblyReference.cache
+C:\Projects\HT_tasks_atoffice\Task1\obj\Debug\Task1.csproj.CoreCompileInputs.cache
+C:\Projects\HT_tasks_atoffice\Task1\obj\Debug\Task1.csproj.CopyComplete
+C:\Projects\HT_tasks_atoffice\Task1\obj\Debug\Task1.exe
+C:\Projects\HT_tasks_atoffice\Task1\obj\Debug\Task1.pdb
